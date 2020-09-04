@@ -29,7 +29,7 @@ app.use('/API/users', usersRoutes);
 app.use('/API/horses', horseRoutes);
 
 
-mongoose.connect('mongodb://localhost/Horses');
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/Horses');
 //var router = express.Router();
 
 
